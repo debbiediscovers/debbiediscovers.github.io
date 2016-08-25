@@ -67,7 +67,9 @@ The great thing about GitHub is that it also lets you host your own (secure!) we
 <a id="using-github-pages" class="anchor" href="#using-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Github Pages</h2>
 <p>The easiest way to create your own website is to use GitHub's automatic page generator. This lets you make a webpage without requiring any knowledge of HTML or CSS or Javascript. 
 After creating your repository, click on Settings (lower left corner) and you will see the automatic page generator function. Simply follow the instructions and select from a range of stylish templates.
-Super easy, and pretty neat. <em>Note that GitHub uses Markdown, which is similar to html but much simpler.</em></p>
+Super easy, and pretty neat.</p>
+
+<p>GitHub uses Markdown, which is similar to html but much simpler. All the README files that you see on Giithub are markdown files. It is good practice to have a README for each repository you create s people know what you are trying to do.</p>
 
 <h2>
 <a id="using-github-for-mac-or-windows" class="anchor" href="#using-github-for-mac-or-windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Github for Mac or Windows</h2>
@@ -75,8 +77,9 @@ Super easy, and pretty neat. <em>Note that GitHub uses Markdown, which is simila
 
 <h2>
 <a id="using-terminal" class="anchor" href="#using-terminal" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Terminal</h2>
-<p>You will need to use Terminal for this, but it's not that hard. For most part, if I see something  I like on Github, I typically copy and paste it into Terminal, whether it's javascript, node.js, go, ruby, python. That works about 80% of the time.
-There are only 5 or 6 Git commands to remember, and after a few tries, you will get the hang of it. After creating your user repository on GitHub, clone the directory in your desktop.  To do this, click on the <a href="https://github.debbiediscovers/debbiediscovers.github.io">https://github.debbiediscovers/debbiediscovers.github.io</a> link on the lower right hand side of the web page. Go back to terminal and use the command:</p>
+<p>You will need to use the command line for this, but it's not that hard. For most part, if I see something  I like on Github, I practice my style of Git which I call "fork and pray".  Whether it's javascript, node.js, go, ruby, python, I just copy and paste it into Terminal and it either works or it doesn't. Haven't done any real damage to anything or anyone.  YET.</p>
+<p></p>There are only 5 or 6 Git commands to remember, and after a few tries, you will get the hang of it.</p>
+<p>After creating your user repository on GitHub, clone the directory in your desktop.  To do this, click on the <a href="https://github.debbiediscovers/debbiediscovers.github.io">https://github.debbiediscovers/debbiediscovers.github.io</a> link on the lower right hand side of the web page. Go back to terminal and use the command prompt and type:</p>
 
 <pre><code>git clone https://github.debbiediscovers/debbiediscovers.github.io
 </code></pre>
@@ -120,49 +123,45 @@ git commit -m "Initial commit"
 git push -u origin master
 </code></pre>
 
-<p>And there you go! </p>
+<p>And there you go!</p>
 
-<p>You can even add your own custom domain to your website. </p>
-<p>To add an "apex-domain" (normal url like "debbiediscovers.com"), point your A records to the following IP addresses:</p>
-
-<pre><code>
+<h2>Custom Domains and Favicons</h2>
+<p>You can even add your own custom domain to your website.</p>
+<p>To add an "apex domain" (which means a base url like "debbiediscovers.com"), add two A records and point them to the following IP addresses:
 192.30.252.153
 192.30.252.154
-</code></pre>
+</p>
 
 <p>
-To add a "sub-domain" (e.g."info.debbiediscovers.com"),point your CNAME (without the www) to your Github Pages default domain (debbiediscovers.github.io).
-If you use Bluehost for example, don't create subdomain as Bluehost will add a folder in your public directory and there will be a conflict.  Just change the CNAME
-</p>
-<p>Wait for 30 minutes and you will have your very own webpage hosted on Git, beautifully styled on your own custom domain. </p>
-<p>If you are using gh-pages, you will need to "checkout" and create a new branch.</p>
+To add a "sub-domain" (e.g."info.debbiediscovers.com"), point your CNAME (without the WWW) to your Github Pages default domain (debbiediscovers.github.io).</p>
+<p>If you use Bluehost for example, don't create subdomain as Bluehost will add a folder in your public directory and there will be a conflict.  Just change the CNAME</p>
+<p>Wait for 30 minutes and you will have your very own webpage hosted on Git, styled on your own custom domain. </p>
+
+<p>Note: If you are using gh-pages, you will need to "checkout" and create a new branch.</p>
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
 </code></pre>
 
-<p>Add your own custom favicon by adding this line of code. Don't forget to dump your favicon.png or favicon.ico file into the master repository</p>
-
+<p>Add your own custom favicon with his line of code. Don't forget to throw your favicon.png or favicon.ico file into the master repository</p>
 <pre><code>
 	<link rel="shortcut icon" type="image/png" href="/favicon.png">
 </pre></code>
 
-<p>With Namecheap giving all university students from UK, US, Canada and Australia free .me domains.</p>
+<h2>Free Domain for University Students and Much More from NameCheap and Github Education</h2>
+<p>Namecheap is giving all university students from UK, US, Canada and Australia a free .me domain for one year or special deals on their other domains.</p>
 <p>If you are not from one of those four countries, do not fret. Github Education has an even better deal for any student age 13 and above enrolled in a degree or diploma course. </p>
 <p>Students not only get the free .me domain from Namecheap, but a total of more than $2,000 worth of freebies including the text editor Atom, a Digital Oceon's cloud-hosting account, Microsoft Azure's Visual Studio, 15K SendGrid emails, Waived transaction fees on Stripe for  $1K revenues, Udacity and Thinkful courses and much more.</p>
 <p>Read  more about it on my blog post <a href="http://debbiediscovers.com/blog/free-domain-for-students/">Free Domain for Students but What's the Catch?</a></p>
 
-<p>With so many freebies, there is really no excuse not to claim and build your own webpage on Github, as well as host your entire auto-updating Twitter Archive on Github.</p>
-<p>Happy Forking!</p>
-<p>Debbie</p>
+<p>With so many freebies, there is really no excuse not to claim and build your own webpage on Github.</p>
+<p>Next: See my <a href="http://debbiediscovers.github.io/disney/">favourite Disney quotes that inspired my first Medium post!</a></p>
+<p>Next: Try hosting your entire Twitter history on Github Pages <a href="http://debbiediscovers.github.io/twitter/"></p>
 
-     <p>Next: See my <a href="http://debbiediscovers.github.io/disney/">Disney Site</a></p>
-     <p>Next: See my <a href="http://debbiediscovers.github.io/twitter/">Auto-Updating Twitter Archive</a></p>
-     <p>Next: See my <a href="http://debbiediscovers.github.io/twitter/">Auto-Updating Twitter Archive</a></p>
-     <p>Next: See my <a href="http://debbiediscovers.github.io/twitter/">Auto-Updating Twitter Archive</a></p>
-     <p>Next: See my <a href="http://debbiediscovers.github.io/twitter/">Auto-Updating Twitter Archive</a></p>
-     <p>Next: See my <a href="http://debbiediscovers.github.io/twitter/">Auto-Updating Twitter Archive</a></p>
-     
+<p>Happy Forking!</p>
+<h3>Debbie</h3>
+
+ 
       <footer class="site-footer">
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
